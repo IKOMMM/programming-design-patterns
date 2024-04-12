@@ -9,11 +9,13 @@ namespace DependencyInjection
     {
         public InjectAttribute() { }
     }
+
     [AttributeUsage(AttributeTargets.Method)]
     public sealed class ProvideAttribute : Attribute
     {
         public ProvideAttribute() { }
     }
+    public interface IDependencyProvider { }
 
     public class Injector : MonoBehaviour
     {
